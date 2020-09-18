@@ -61,7 +61,6 @@ public class CustomerController {
 	public String search(@RequestParam("theSearchName") String searchName,Model model) {
 		List<Customer> customers = service.searchCustomers(searchName);
 		model.addAttribute("customers", customers);
-		model.addAttribute("theSearchName", searchName);
 		return "list-customers";
 	}
 }
